@@ -10,6 +10,11 @@ class CampusContainer extends Component {
     this.props.fetchCampus(this.props.match.params.id);
   }
 
+  handleDelete = (campusId) =>
+    {
+        this.props.deleteCampus(campusId);
+    }
+
   render() {
     return (
       <CampusView 

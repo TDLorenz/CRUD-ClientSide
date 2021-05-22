@@ -18,6 +18,7 @@ const CampusView = (props) => {
         );
       })}
       </ul>
+      <button onClick={() => props.handleDelete(props.campus.id)}>Delete</button>
     </div>
   );
 
