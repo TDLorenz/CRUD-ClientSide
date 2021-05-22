@@ -38,8 +38,6 @@ class AllStudentsContainer extends Component {
 
     handleDelete = (studentId) =>
     {
-        if(!window.confirm(`Are you sure you want to delete student ${studentId}?`)) return;
-        
         this.props.deleteStudent(studentId);
     }
 
