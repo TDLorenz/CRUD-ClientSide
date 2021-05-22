@@ -12,40 +12,38 @@ class AllCampusesContainer extends Component {
     this.props.fetchAllCampuses();
   }
 
-  handleSubmit = (event) =>
+  handleSubmit = (event) => {
+    // Prevent browser refresh
+    event.preventDefault();
+
+    const name = event.target.name.value;
+    const address = event.target.address.value;
+    const description = event.target.description.value;
+    const imageUrl = event.target.imageUrl.value;
+
+    let newCampus =
     {
-        // Prevent browser refresh
-        event.preventDefault();
+      name: name,
+      address: address,
+      description: description,
+      imageUrl: imageUrl
+    };
+    this.props.addCampus(newCampus);
 
-        const name = event.target.name.value;
-        const address = event.target.address.value;
-        const description = event.target.description.value;
-        const imageUrl = event.target.imageUrl.value;
+    event.target.reset();
+  }
 
-        let newCampus =
-        {
-            name: name,
-            address: address,
-            description: description,
-            imageUrl: imageUrl
-        };
-        this.props.addCampus(newCampus);
-
-        event.target.reset();
-    }
-
-    handleDelete = (campusId) =>
-    {
-        this.props.deleteCampus(campusId);
-    }
+  handleDelete = (campusId) => {
+    this.props.deleteCampus(campusId);
+  }
 
   render() {
     return (
       <div>
-      <AllCampusesView
-        allCampuses={this.props.allCampuses}
-        handleDelete={this.handleDelete}
-      />
+        <AllCampusesView
+          allCampuses={this.props.allCampuses}
+          handleDelete={this.handleDelete}
+        />
       </div>
     );
   }
