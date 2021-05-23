@@ -82,6 +82,9 @@ const AllCampusesView = (props) => {
           <img src={campus.imageUrl} width="150px" alt={campus.name} />
           <p>{campus.students.length} students</p>
           <button onClick={() => props.handleDelete(campus.id)}>Delete</button>
+          <Link to={`/campuses/edit/${campus.id}`}>
+            <h1>Edit</h1>
+          </Link>
         </div>
       ))}
     </div>
