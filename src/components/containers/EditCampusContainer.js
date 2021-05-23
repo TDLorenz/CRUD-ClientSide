@@ -10,6 +10,7 @@ class EditCampusContainer extends Component {
     //getting campus ID from url
     // campus = this.props.fetchCampus(this.props.match.params.id);
     // console.log(this.props.match.params.id)
+    this.props.fetchCampus(this.props.match.params.id);
   }  
 
 
@@ -41,16 +42,16 @@ class EditCampusContainer extends Component {
         <div>
             <form onSubmit={this.handleSubmit}>
                 <label htmlFor="name">Name: </label>
-                  <input type="text" name="name" defaultValue = "default here" placeholder="Campus Name" required />
+                  <input type="text" name="name" defaultValue = {this.props.campus.name} placeholder="Campus Name" required />
                 <br/>
                 <label htmlFor="address">Address: </label>
-                  <input type="text" name="address" placeholder="Campus Address" required />
+                  <input type="text" name="address" defaultValue = {this.props.campus.address} placeholder="Campus Address" required />
                 <br/>
                 <label htmlFor="description">Description: </label>
-                  <input type="text" name="description" placeholder="Campus Description" />
+                  <input type="text" name="description" defaultValue = {this.props.campus.description} placeholder="Campus Description" />
                 <br/>
                 <label htmlFor="imageUrl">Image Url: </label>
-                  <input type="text" name="imageUrl" placeholder= "https://via.imageurl.com/" />
+                  <input type="text" name="imageUrl" defaultValue = {this.props.campus.imageUrl} placeholder= "https://via.imageurl.com/" />
                 <br/>
                   <button type="submit">Submit</button>
               </form>
@@ -64,7 +65,7 @@ class EditCampusContainer extends Component {
 //Map state to props;
 const mapState = (state) => {
     return {
-      allCampuses: state.allCampuses,
+      campus: state.campus,
     };
   };
   

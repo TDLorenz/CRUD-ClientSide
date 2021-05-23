@@ -6,7 +6,12 @@ import { fetchStudentThunk } from "../../store/thunks";
 
 
 class EditStudentContainer extends Component {
-    
+  componentDidMount() {
+    //getting student ID from url
+    this.props.fetchStudent(this.props.match.params.id);
+  }  
+
+
     handleSubmit = (event) =>
     {
         event.preventDefault();
@@ -37,19 +42,19 @@ class EditStudentContainer extends Component {
         <div>
             <form onSubmit={this.handleSubmit}>
                 <label htmlFor="firstname">FirstName: </label>
-                  <input type="text" name="firstname" placeholder="First Name" required />
+                  <input type="text" name="firstname" defaultValue = {this.props.student.firstname} placeholder="First Name" required />
                 <br/>
                 <label htmlFor="lastname">LastName: </label>
-                  <input type="text" name="lastname" placeholder="Last Name" required />
+                  <input type="text" name="lastname" defaultValue = {this.props.student.lastname} placeholder="Last Name" required />
                 <br/>
                 <label htmlFor="email">Email: </label>
-                  <input type="text" name="email" placeholder="Email" />
+                  <input type="text" name="email" defaultValue = {this.props.student.email} placeholder="Email" />
                 <br/>
                 <label htmlFor="gpa">GPA: </label>
-                  <input type="text" name="gpa" placeholder="GPA" />
+                  <input type="text" name="gpa" defaultValue = {this.props.student.gpa} placeholder="GPA" />
                 <br/>
                 <label htmlFor="imageUrl">Image Url: </label>
-                  <input type="text" name="imageUrl" placeholder="https://via.imageurl.com/" />
+                  <input type="text" name="imageUrl" defaultValue = {this.props.student.imageUrl} placeholder="https://via.imageurl.com/" />
                 <br/>
                   <button type="submit">Submit</button>
               </form>
@@ -63,7 +68,7 @@ class EditStudentContainer extends Component {
 //Map state to props;
 const mapState = (state) => {
     return {
-      allStudents: state.allStudents,
+      student: state.student,
     };
   };
   
