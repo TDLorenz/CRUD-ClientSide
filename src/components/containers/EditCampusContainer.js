@@ -6,7 +6,13 @@ import { fetchCampusThunk } from "../../store/thunks";
 
 
 class EditCampusContainer extends Component {
-    
+  componentDidMount() {
+    //getting campus ID from url
+    //this.props.fetchCampus(this.props.match.params.id);
+    console.log(this.props.match.params.id)
+  }  
+
+
     handleSubmit = (event) =>
     {
         event.preventDefault();
@@ -18,6 +24,7 @@ class EditCampusContainer extends Component {
 
         let newCampus =
         {
+            id: this.props.match.params.id,
             name: name,
             address: address,
             description: description,
