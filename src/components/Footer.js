@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from '../App.cs'
+import styles from '../../App.css'
 
 class Footer extends Component {
     render() {
@@ -28,4 +28,4 @@ class Footer extends Component {
     }
 }
 
-export default NavBar;
+export default Footer;
