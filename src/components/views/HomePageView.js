@@ -59,13 +59,13 @@ const HomePageView = () => {
         </Toolbar>
       </AppBar>
 
-      <div className={classes.greeting}><h1>Campus and Student Interactive Management Simulation</h1></div>
-      <section className={styles.layout}>
+      <div className={classes.greeting}><h className={styles.homepage_title}>Campus and Student Interactive Management Simulation</h></div>
+      <section className={styles.homepage_layout}>
         <h1>Welcome To The Home Page!</h1>
         <br />
         <br />
         <br />
-        <p>
+        <p className={styles.homepage_text}>
           This RESTful full-stack web app simualtes the management of some students and campuses. Students and Campuses
           can be viewed via navigating the differnt links above on the navbar and are seperated. It is possible to view
           single campuses and students as well as all of them. Student and Campus entries can be deleted or updated by adding new entries.
