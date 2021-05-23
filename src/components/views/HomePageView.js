@@ -3,7 +3,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import styles from '../styles/index.css'
+import styles from './styles/index.css'
 
 import { Link } from 'react-router-dom';
 
@@ -79,15 +79,15 @@ const HomePageView = () => {
           <p>
             Vladimir Andreev &emsp; &nbsp; &nbsp; <a href="https://github.com/VladimirAndreev09">https://github.com/VladimirAndreev09</a>
           </p>
-
+          <br />
           <p>
             Troy Daniello &emsp; &emsp; &ensp; &ensp; <a href="https://github.com/TDLorenz">https://github.com/TDLorenz</a>
           </p>
-
+          <br />
           <p>
             Sajarin Dider &emsp; &emsp; &ensp; &ensp; <a href="https://github.com/sajarindider">https://github.com/sajarindider</a>
           </p>
-
+          <br />
           <p>
             Valentine Shidlovskiy &nbsp; <a href="https://github.com/Valentine-S">https://github.com/Valentine-S</a>
           </p>

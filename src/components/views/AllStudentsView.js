@@ -14,22 +14,22 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     textAlign: 'left',
     fontType: 'bold',
-    fontFamily: 'Courier, sans-serif', 
-    fontSize: '35px', 
+    fontFamily: 'Courier, sans-serif',
+    fontSize: '35px',
     color: '#CDDC39'
   },
-  appBar:{
+  appBar: {
     backgroundColor: '#11153e',
     shadows: ['none'],
   },
-  greeting:{
+  greeting: {
     display: 'flex',
     justifyContent: 'center',
     backgroundColor: 'white',
     width: "50%",
     margin: "auto",
   },
-  links:{
+  links: {
     textDecoration: 'none',
   }
 
@@ -45,28 +45,28 @@ const AllStudentsView = (props) => {
   return (
     <div>
       <div className={classes.root}>
-      <AppBar position="static" elevation={0} className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h6" className={classes.title} color="inherit" >
-            CRUD App
+        <AppBar position="static" elevation={0} className={classes.appBar}>
+          <Toolbar>
+            <Typography variant="h6" className={classes.title} color="inherit" >
+              CRUD App
           </Typography>
 
-          <Link className={classes.links} to={'/campuses'} >
-            <Button variant="contained" color="primary" style={{marginRight: '10px'}}>
-              All Campuses
+            <Link className={classes.links} to={'/campuses'} >
+              <Button variant="contained" color="primary" style={{ marginRight: '10px' }}>
+                All Campuses
             </Button>
-          </Link>
+            </Link>
 
-          <Link className={classes.links} to={'/students'} >
-            <Button variant="contained" color="primary">
-              All Students
+            <Link className={classes.links} to={'/students'} >
+              <Button variant="contained" color="primary">
+                All Students
             </Button>
-          </Link>
-        </Toolbar>
-      </AppBar>
-      
-      <div className={classes.greeting}><h1>Campus View</h1></div>
-    </div>
+            </Link>
+          </Toolbar>
+        </AppBar>
+
+        <div className={classes.greeting}><h1>Campus View</h1></div>
+      </div>
 
       {props.allStudents.map((student) => (
         <div key={student.id}>
@@ -76,6 +76,27 @@ const AllStudentsView = (props) => {
           <p>{student.gpa}</p>
         </div>
       ))}
+
+      <footer className={styles.footer}>
+        <p>
+          <h3>Contributors</h3>
+          <p>
+            Vladimir Andreev &emsp; &nbsp; &nbsp; <a href="https://github.com/VladimirAndreev09">https://github.com/VladimirAndreev09</a>
+          </p>
+          <br />
+          <p>
+            Troy Daniello &emsp; &emsp; &ensp; &ensp; <a href="https://github.com/TDLorenz">https://github.com/TDLorenz</a>
+          </p>
+          <br />
+          <p>
+            Sajarin Dider &emsp; &emsp; &ensp; &ensp; <a href="https://github.com/sajarindider">https://github.com/sajarindider</a>
+          </p>
+          <br />
+          <p>
+            Valentine Shidlovskiy &nbsp; <a href="https://github.com/Valentine-S">https://github.com/Valentine-S</a>
+          </p>
+        </p>
+      </footer>
     </div>
   );
 };
