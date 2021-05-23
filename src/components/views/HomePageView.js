@@ -73,6 +73,27 @@ const HomePageView = () => {
           The app will track these and update the entries via a database.
         </p>
       </section>
+
+      <footer>
+        <p>
+          <h3>Contributors</h3>
+          <p>
+            Vladimir Andreev &emsp; &nbsp; &nbsp; <a href="https://github.com/VladimirAndreev09">https://github.com/VladimirAndreev09</a>
+          </p>
+
+          <p>
+            Troy Daniello &emsp; &emsp; &ensp; &ensp; <a href="https://github.com/TDLorenz">https://github.com/TDLorenz</a>
+          </p>
+
+          <p>
+            Sajarin Dider &emsp; &emsp; &ensp; &ensp; <a href="https://github.com/sajarindider">https://github.com/sajarindider</a>
+          </p>
+
+          <p>
+            Valentine Shidlovskiy &nbsp; <a href="https://github.com/Valentine-S">https://github.com/Valentine-S</a>
+          </p>
+        </p>
+      </footer>
     </div>
   );
 }
