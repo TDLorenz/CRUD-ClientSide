@@ -69,24 +69,34 @@ const AllCampusesView = (props) => {
       <div className={classes.greeting}><h1>All Campuses View</h1></div>
     </div>
 
+      <div className="AddButton">
       <Link to={'/campuses/add'} >
-            <Button variant="contained" color="primary">
+            <Button variant="contained" color="primary" size="lg">
               Add Campus
             </Button>
           </Link>
+      </div>
+      <div className="cols">  
       {props.allCampuses.map((campus) => (
-        <div key={campus.id}>
+        
+        <div className="item" key={campus.id}>
+          
           <Link to={`/campus/${campus.id}`}>
             <h1>{campus.name}</h1>
           </Link>
-          <img src={campus.imageUrl} width="150px" alt={campus.name} />
+          <img src={campus.imageUrl} width="500px" alt={campus.name} />
           <p>{campus.students.length} students</p>
           <button onClick={() => props.handleDelete(campus.id)}>Delete</button>
           <Link to={`/campuses/edit/${campus.id}`}>
             <h1>Edit</h1>
           </Link>
+          {/*<Button variant="contained" color="primary">Edit</Button>*/}
+          <Button variant="contained" color="primary" onClick={() => props.handleDelete(campus.id)}>Delete</Button>
+          {/* <div className="spacer"></div> */}
         </div>
+        
       ))}
+      </div>
     </div>
   );
 };
