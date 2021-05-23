@@ -14,22 +14,22 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     textAlign: 'left',
     fontType: 'bold',
-    fontFamily: 'Courier, sans-serif', 
-    fontSize: '35px', 
+    fontFamily: 'Courier, sans-serif',
+    fontSize: '35px',
     color: '#CDDC39'
   },
-  appBar:{
+  appBar: {
     backgroundColor: '#11153e',
     shadows: ['none'],
   },
-  greeting:{
+  greeting: {
     display: 'flex',
     justifyContent: 'center',
     backgroundColor: 'white',
     width: "50%",
     margin: "auto",
   },
-  links:{
+  links: {
     textDecoration: 'none',
   }
 
@@ -46,56 +46,56 @@ const AllCampusesView = (props) => {
 
     <div>
       <div className={classes.root}>
-      <AppBar position="static" elevation={0} className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h6" className={classes.title} color="inherit" >
-            CRUD App
+        <AppBar position="static" elevation={0} className={classes.appBar}>
+          <Toolbar>
+            <Typography variant="h6" className={classes.title} color="inherit" >
+              CRUD App
           </Typography>
 
-          <Link className={classes.links} to={'/campuses'} >
-            <Button variant="contained" color="primary" style={{marginRight: '10px'}}>
-              All Campuses
+            <Link className={classes.links} to={'/campuses'} >
+              <Button variant="contained" color="primary" style={{ marginRight: '10px' }}>
+                All Campuses
             </Button>
-          </Link>
+            </Link>
 
-          <Link className={classes.links} to={'/students'} >
-            <Button variant="contained" color="primary">
-              All Students
+            <Link className={classes.links} to={'/students'} >
+              <Button variant="contained" color="primary">
+                All Students
             </Button>
-          </Link>
-        </Toolbar>
-      </AppBar>
-      
-      <div className={classes.greeting}><h1>All Campuses View</h1></div>
-    </div>
+            </Link>
+          </Toolbar>
+        </AppBar>
+
+        <div className={classes.greeting}><h1>All Campuses View</h1></div>
+      </div>
 
       <div className="AddButton">
-      <Link to={'/campuses/add'} >
-            <Button variant="contained" color="primary" size="lg">
-              Add Campus
+        <Link to={'/campuses/add'} >
+          <Button variant="contained" color="primary" size="lg">
+            Add Campus
             </Button>
-          </Link>
+        </Link>
       </div>
-      <div className="cols">  
-      {props.allCampuses.map((campus) => (
-        
-        <div className="item" key={campus.id}>
-          
-          <Link to={`/campus/${campus.id}`}>
-            <h1>{campus.name}</h1>
-          </Link>
-          <img src={campus.imageUrl} width="500px" alt={campus.name} />
-          <p>{campus.students.length} students</p>
-          
-          <Link className="editLink" to={`/campuses/edit/${campus.id}`}>
-          <Button variant="contained" color="primary">Edit</Button>
-          </Link>
-          
-          <Button variant="contained" color="primary" onClick={() => props.handleDelete(campus.id)}>Delete</Button>
-          {/* <div className="spacer"></div> */}
-        </div>
-        
-      ))}
+      <div className="cols">
+        {props.allCampuses.map((campus) => (
+
+          <div className="item" key={campus.id}>
+
+            <Link to={`/campus/${campus.id}`}>
+              <h1>{campus.name}</h1>
+            </Link>
+            <img src={campus.imageUrl} width="500px" alt={campus.name} />
+            <p>{campus.students.length} students</p>
+
+            <Link className="editLink" to={`/campuses/edit/${campus.id}`}>
+              <Button variant="contained" color="primary">Edit</Button>
+            </Link>
+
+            <Button variant="contained" color="primary" onClick={() => props.handleDelete(campus.id)}>Delete</Button>
+            {/* <div className="spacer"></div> */}
+          </div>
+
+        ))}
       </div>
     </div>
   );

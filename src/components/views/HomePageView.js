@@ -3,6 +3,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
+import Footer from '../Footer'
 
 import { Link } from 'react-router-dom';
 
@@ -59,6 +60,25 @@ const HomePageView = () => {
         </Toolbar>
       </AppBar>
 
+<<<<<<< HEAD
+=======
+      <br />
+      <div className={classes.greeting}>Homepage</div>
+      <br />
+      <h className="homepage_title">Campus and Student Interactive Management Simulation</h>
+      <br />
+      <section className="homepage_layout">
+        <p className="homepage_text">
+          This RESTful full-stack web app simualtes the management of some students and campuses. Students and Campuses
+          can be viewed via navigating the differnt links above on the navbar and are seperated. It is possible to view
+          single campuses and students as well as all of them. Student and Campus entries can be deleted or updated by adding new entries.
+          The app will track these and update the entries via a database.
+        </p>
+      </section>
+
+      <Footer />
+
+>>>>>>> 03591ec1dd8566bfb8a24e37fbcf69eed0f21589
     </div>
 
   );
