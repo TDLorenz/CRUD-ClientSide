@@ -16,7 +16,7 @@ code {
   background-color: #4E5D94;
   display: flex;
   text-align: center;
-  padding: 10px 10px 10px 10px;
+  /* padding: 10px 10px 10px 10px; */
 }
 
 .homepage_text {
@@ -24,7 +24,7 @@ code {
   /* display: flex; */
   text-align: center;
   padding: 10px 10px 10px 10px;
-  font-size: 30px
+  font-size: 30px;
 }
 
 .homepage_title {
@@ -32,7 +32,7 @@ code {
   display: flex;
   font-size: 50px;
   text-align: center;
-  padding: 10px 10px 10px 10px;
+  /*padding: 10px 10px 10px 10px;*/
 }
 
 footer {
@@ -44,8 +44,8 @@ footer {
   text-align: left; 
   color: white;
   bottom: 0;
-  position: relative;
   width: 100%;
+  position:absolute;
 }
 
 footer a:hover {
