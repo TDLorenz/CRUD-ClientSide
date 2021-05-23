@@ -29,8 +29,8 @@ code {
 
 .homepage_title {
   color: white;
-  display: flex;
-  font-size: 50px;
+  /*display: flex;*/
+  font-size: 40px;
   text-align: center;
   /*padding: 10px 10px 10px 10px;*/
 }

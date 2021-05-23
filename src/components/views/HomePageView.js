@@ -60,9 +60,9 @@ const HomePageView = () => {
         </Toolbar>
       </AppBar>
 
+      <br />
       <div className={classes.greeting}>Homepage</div>
       <br />
-      <section></section>
       <h className="homepage_title">Campus and Student Interactive Management Simulation</h>
       <br />
       <section className="homepage_layout">
