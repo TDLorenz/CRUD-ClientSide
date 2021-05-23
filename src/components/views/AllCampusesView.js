@@ -5,7 +5,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Footer from '../Footer'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -85,7 +84,7 @@ const AllCampusesView = (props) => {
           <button onClick={() => props.handleDelete(props.campus.id)}>Delete</button>
         </div>
       ))}
-      <Footer />
+      
     </div>
   );
 };

@@ -3,7 +3,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import Footer from '../Footer'
 
 import { Link } from 'react-router-dom';
 
@@ -88,7 +87,6 @@ const CampusView = (props) => {
       </ul>
       <button onClick={() => props.handleDelete(props.campus.id)}>Delete</button>
 
-      <Footer />
     </div>
   );
 

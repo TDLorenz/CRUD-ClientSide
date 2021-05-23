@@ -5,7 +5,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import Footer from '../Footer'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -77,7 +76,6 @@ const AllStudentsView = (props) => {
           <p>{student.gpa}</p>
         </div>
       ))}
-      <Footer />
     </div>
   );
 };

@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   greeting: {
     display: 'flex',
     justifyContent: 'center',
-    backgroundColor: white,
+    backgroundColor: 'white',
     width: "50%",
     margin: "auto",
   },
