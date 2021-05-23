@@ -36,6 +36,11 @@ code {
   text-decoration: none;
 }
 
+.editLink{
+  color:#4E5D94;
+  text-decoration: none;
+}
+
 .item h1{
   color:#4E5D94;
   text-decoration: none;
@@ -51,3 +56,4 @@ code {
   text-align: center;
   font-size: 16px;
 }
+

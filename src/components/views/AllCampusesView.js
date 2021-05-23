@@ -86,11 +86,11 @@ const AllCampusesView = (props) => {
           </Link>
           <img src={campus.imageUrl} width="500px" alt={campus.name} />
           <p>{campus.students.length} students</p>
-          <button onClick={() => props.handleDelete(campus.id)}>Delete</button>
-          <Link to={`/campuses/edit/${campus.id}`}>
-            <h1>Edit</h1>
+          
+          <Link className="editLink" to={`/campuses/edit/${campus.id}`}>
+          <Button variant="contained" color="primary">Edit</Button>
           </Link>
-          {/*<Button variant="contained" color="primary">Edit</Button>*/}
+          
           <Button variant="contained" color="primary" onClick={() => props.handleDelete(campus.id)}>Delete</Button>
           {/* <div className="spacer"></div> */}
         </div>
