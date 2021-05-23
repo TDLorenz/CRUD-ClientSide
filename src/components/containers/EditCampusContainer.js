@@ -8,8 +8,8 @@ import { fetchCampusThunk } from "../../store/thunks";
 class EditCampusContainer extends Component {
   componentDidMount() {
     //getting campus ID from url
-    //this.props.fetchCampus(this.props.match.params.id);
-    console.log(this.props.match.params.id)
+    // campus = this.props.fetchCampus(this.props.match.params.id);
+    // console.log(this.props.match.params.id)
   }  
 
 
@@ -41,7 +41,7 @@ class EditCampusContainer extends Component {
         <div>
             <form onSubmit={this.handleSubmit}>
                 <label htmlFor="name">Name: </label>
-                  <input type="text" name="name" placeholder="Campus Name" required />
+                  <input type="text" name="name" defaultValue = "default here" placeholder="Campus Name" required />
                 <br/>
                 <label htmlFor="address">Address: </label>
                   <input type="text" name="address" placeholder="Campus Address" required />
@@ -50,7 +50,7 @@ class EditCampusContainer extends Component {
                   <input type="text" name="description" placeholder="Campus Description" />
                 <br/>
                 <label htmlFor="imageUrl">Image Url: </label>
-                  <input type="text" name="imageUrl" placeholder="https://via.imageurl.com/" />
+                  <input type="text" name="imageUrl" placeholder= "https://via.imageurl.com/" />
                 <br/>
                   <button type="submit">Submit</button>
               </form>
@@ -78,6 +78,7 @@ const mapState = (state) => {
 
   EditCampusContainer.propTypes = {
     editCampus: PropTypes.array.isRequired,
+    fetchCampus: PropTypes.func.isRequired,
   };
 
 export default connect(mapState, mapDispatch)(EditCampusContainer);

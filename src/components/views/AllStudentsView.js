@@ -65,15 +65,28 @@ const AllStudentsView = (props) => {
         </Toolbar>
       </AppBar>
       
-      <div className={classes.greeting}><h1>Campus View</h1></div>
+      <div className={classes.greeting}><h1>All Students View</h1></div>
     </div>
-
+    <div className="AddButton">
+      <Link to={'/students/add'} >
+            <Button variant="contained" color="primary" size="lg">
+              Add Student
+            </Button>
+          </Link>
+      </div>
       {props.allStudents.map((student) => (
         <div key={student.id}>
           <Link to={`/student/${student.id}`}>
             <h1>{student.firstname} {student.lastname}</h1>
           </Link>
+          <img src={student.imageUrl} width="500px" alt={student.firstname} />
           <p>{student.gpa}</p>
+
+          <Link className="editLink" to={`/students/edit/${student.id}`}>
+          <Button variant="contained" color="primary">Edit</Button>
+          </Link>
+
+          <Button variant="contained" color="primary" onClick={() => props.handleDelete(student.id)}>Delete</Button>
         </div>
       ))}
     </div>
