@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { addCampusThunk } from "../../store/thunks";
+import Button from '@material-ui/core/Button';
 
 
 class AddCampusContainer extends Component {
@@ -30,21 +31,21 @@ class AddCampusContainer extends Component {
 
     render(){
         return(
-        <div>
+        <div className="item">
             <form onSubmit={this.handleSubmit}>
-                <label htmlFor="name">Name: </label>
-                  <input type="text" name="name" placeholder="Campus Name" required />
+                <label className="studentLabel" htmlFor="name">Name: </label>
+                  <input className="studentInput" type="text" name="name" placeholder="Campus Name" required />
                 <br/>
-                <label htmlFor="address">Address: </label>
-                  <input type="text" name="address" placeholder="Campus Address" required />
+                <label className="studentLabel" htmlFor="address">Address: </label>
+                  <input className="studentInput" type="text" name="address" placeholder="Campus Address" required />
                 <br/>
-                <label htmlFor="description">Description: </label>
-                  <input type="text" name="description" placeholder="Campus Description" />
+                <label className="studentLabel" htmlFor="description">Description: </label>
+                  <input className="studentInput" type="text" name="description" placeholder="Campus Description" />
                 <br/>
-                <label htmlFor="imageUrl">Image Url: </label>
-                  <input type="text" name="imageUrl" placeholder="https://via.imageurl.com/" />
+                <label className="studentLabel" htmlFor="imageUrl">Image Url: </label>
+                  <input className="studentInput" type="text" name="imageUrl" placeholder="https://via.imageurl.com/" />
                 <br/>
-                  <button type="submit">Submit</button>
+                  <Button type="submit" variant="contained" color="primary">Submit</Button>
               </form>
         </div>
         );

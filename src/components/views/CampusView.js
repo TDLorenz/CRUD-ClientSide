@@ -73,11 +73,12 @@ const CampusView = (props) => {
       <div className={classes.greeting}><h1>Campus View</h1></div>
     </div>
 
-
+    <div className="item">
       <h1>{campus.name}</h1>
       <p>{campus.description}</p>
       <p>{campus.address}</p>
       <ul>
+        <h2>Students: </h2> 
       {campus.students.map( student => {
         let name = student.firstname + " " + student.lastname;
         return (
@@ -85,7 +86,8 @@ const CampusView = (props) => {
         );
       })}
       </ul>
-      <button onClick={() => props.handleDelete(props.campus.id)}>Delete</button>
+      <Button variant="contained" color="primary" onClick={() => props.handleDelete(campus.id)}>Delete</Button>
+    </div>
     </div>
   );
 

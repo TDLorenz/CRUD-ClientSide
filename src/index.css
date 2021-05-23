@@ -16,7 +16,17 @@ code {
 .cols {
   columns: 2 auto;
   text-align: center;
+  -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
 }
+
+.studentCols {
+  columns: 3 auto;
+  text-align: center;
+  
+}
+
 .item{
   
   margin-bottom: 10px;
@@ -29,6 +39,16 @@ code {
 
   border: 2px solid #4E5D94;
   border-radius: 5px;
+
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+
+  color: white;
+  font-size:25px;        
+  
+  /* list-style-type: none; */
+
 }
 
 .Link{
@@ -57,3 +77,20 @@ code {
   font-size: 16px;
 }
 
+.studentLabel {
+  text-align: center;
+  color: white;
+  font-size:25px;
+}
+
+.studentInput {
+  font-size:25px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+ul {
+  padding-left: 0;
+  list-style-position: inside;
+}

@@ -69,11 +69,12 @@ const StudentView = (props) => {
       </AppBar> 
       <div className={classes.greeting}><h1>Student View</h1></div>
     </div>
-        
-        <h1>{student.firstname} {student.lastname}</h1>
-        <img src={student.imageUrl} width="150px" alt={student.firstname} />
-        <p>{student.gpa}</p>
-        <p>{student.email}</p>
+        <div className="item">
+          <h1>{student.firstname} {student.lastname}</h1>
+          <img src={student.imageUrl} width="600px" alt={student.firstname} />
+          <p>GPA: {student.gpa}</p>
+          <p>{student.email}</p>
+        </div>
       </div>
     );
   

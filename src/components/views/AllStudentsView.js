@@ -67,6 +67,7 @@ const AllStudentsView = (props) => {
       
       <div className={classes.greeting}><h1>All Students View</h1></div>
     </div>
+
     <div className="AddButton">
       <Link to={'/students/add'} >
             <Button variant="contained" color="primary" size="lg">
@@ -74,13 +75,14 @@ const AllStudentsView = (props) => {
             </Button>
           </Link>
       </div>
+      <div className="studentCols">
       {props.allStudents.map((student) => (
-        <div key={student.id}>
+        <div className="item" key={student.id}>
           <Link to={`/student/${student.id}`}>
             <h1>{student.firstname} {student.lastname}</h1>
           </Link>
-          <img src={student.imageUrl} width="500px" alt={student.firstname} />
-          <p>{student.gpa}</p>
+          <img src={student.imageUrl} width="450px" alt={student.firstname} />
+          <p>GPA: {student.gpa}</p>
 
           <Link className="editLink" to={`/students/edit/${student.id}`}>
           <Button variant="contained" color="primary">Edit</Button>
@@ -89,6 +91,7 @@ const AllStudentsView = (props) => {
           <Button variant="contained" color="primary" onClick={() => props.handleDelete(student.id)}>Delete</Button>
         </div>
       ))}
+      </div>
     </div>
   );
 };

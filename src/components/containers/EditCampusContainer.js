@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { editCampusThunk } from "../../store/thunks";
 import { fetchCampusThunk } from "../../store/thunks";
+import Button from '@material-ui/core/Button';
 
 
 class EditCampusContainer extends Component {
@@ -39,21 +40,21 @@ class EditCampusContainer extends Component {
 
     render(){
         return(
-        <div>
+        <div className="item">
             <form onSubmit={this.handleSubmit}>
-                <label htmlFor="name">Name: </label>
-                  <input type="text" name="name" defaultValue = {this.props.campus.name} placeholder="Campus Name" required />
+                <label className="studentLabel" htmlFor="name">Name: </label>
+                  <input className="studentInput" type="text" name="name" defaultValue = {this.props.campus.name} placeholder="Campus Name" required />
                 <br/>
-                <label htmlFor="address">Address: </label>
-                  <input type="text" name="address" defaultValue = {this.props.campus.address} placeholder="Campus Address" required />
+                <label className="studentLabel" htmlFor="address">Address: </label>
+                  <input className="studentInput" type="text" name="address" defaultValue = {this.props.campus.address} placeholder="Campus Address" required />
                 <br/>
-                <label htmlFor="description">Description: </label>
-                  <input type="text" name="description" defaultValue = {this.props.campus.description} placeholder="Campus Description" />
+                <label className="studentLabel" htmlFor="description">Description: </label>
+                  <input className="studentInput" type="text" name="description" defaultValue = {this.props.campus.description} placeholder="Campus Description" />
                 <br/>
-                <label htmlFor="imageUrl">Image Url: </label>
-                  <input type="text" name="imageUrl" defaultValue = {this.props.campus.imageUrl} placeholder= "https://via.imageurl.com/" />
+                <label className="studentLabel" htmlFor="imageUrl">Image Url: </label>
+                  <input className="studentInput" type="text" name="imageUrl" defaultValue = {this.props.campus.imageUrl} placeholder= "https://via.imageurl.com/" />
                 <br/>
-                  <button type="submit">Submit</button>
+                <Button type="submit" variant="contained" color="primary">Submit</Button>
               </form>
         </div>
         );
