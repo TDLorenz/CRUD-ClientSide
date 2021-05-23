@@ -33,7 +33,6 @@ const useStyles = makeStyles(theme => ({
   links: {
     textDecoration: 'none',
   }
-
 }));
 
 const HomePageView = () => {
@@ -74,7 +73,7 @@ const HomePageView = () => {
         </p>
       </section>
 
-      <footer>
+      <footer className={styles.footer}>
         <p>
           <h3>Contributors</h3>
           <p>
