@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import styles from '../../App.css'
+//import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Footer extends Component {
     render() {
         return (
-            <footer className={styles.footer}>
+            <footer className={footer}>
                 <p>
                     <h3>Contributors</h3>
                     <p>
