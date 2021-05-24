@@ -45,7 +45,7 @@ const AllCampusesView = (props) => {
       <AppBar position="static" elevation={0} className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" className={classes.title} color="inherit" >
-            CRUD App
+          <Link className={classes.links} to={'/'} >CRUD App</Link>
           </Typography>
 
           <Link className={classes.links} to={'/campuses'} >

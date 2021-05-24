@@ -26,7 +26,7 @@ class AddCampusContainer extends Component {
         this.props.addCampus(newCampus);
 
         event.target.reset();
-        this.props.history.push('/campus/'+newCampus.id);
+        this.props.history.push('/campuses');
     }
 
     render(){

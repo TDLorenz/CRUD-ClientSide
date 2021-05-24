@@ -28,7 +28,7 @@ class AddStudentContainer extends Component {
         this.props.addStudent(newStudent);
 
         event.target.reset();
-        this.props.history.push('/student/'+newStudent.id);
+        this.props.history.push('/students');
     }
 
     render(){
