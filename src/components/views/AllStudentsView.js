@@ -47,10 +47,11 @@ const AllStudentsView = (props) => {
       <div className={classes.root}>
         <AppBar position="static" elevation={0} className={classes.appBar}>
           <Toolbar>
+          
             <Typography variant="h6" className={classes.title} color="inherit" >
-              CRUD App
+            <Link className={classes.links} to={'/'} >CRUD App</Link>
           </Typography>
-
+          
             <Link className={classes.links} to={'/campuses'} >
               <Button variant="contained" color="primary" style={{ marginRight: '10px' }}>
                 All Campuses
@@ -61,7 +62,6 @@ const AllStudentsView = (props) => {
               <Button variant="contained" color="primary">
                 All Students
             </Button>
-<<<<<<< HEAD
           </Link>
         </Toolbar>
       </AppBar>
@@ -75,15 +75,6 @@ const AllStudentsView = (props) => {
             </Button>
           </Link>
       </div>
-=======
-            </Link>
-          </Toolbar>
-        </AppBar>
-
-        <div className={classes.greeting}><h1>Campus View</h1></div>
-      </div>
-
->>>>>>> 03591ec1dd8566bfb8a24e37fbcf69eed0f21589
       {props.allStudents.map((student) => (
         <div key={student.id}>
           <Link to={`/student/${student.id}`}>
