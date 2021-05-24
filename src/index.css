@@ -13,6 +13,27 @@ code {
     monospace;
 }
 
+.homepage_layout {
+  background-color: #4E5D94;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  height: 800px;
+  width: 101%;
+  position: relative;
+}
+.homepage_text {
+  color: white;
+  line-height: 1.3;
+  display: flex; 
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+  
 .cols {
   columns: 2 auto;
   text-align: center;
@@ -27,7 +48,33 @@ code {
   
 }
 
-.item{
+.homepage_title {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  border-style:solid;
+  background-color:black;
+  border-color:#287EC7;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.footer {
+  display: inline-block; 
+  background-color: black;
+  padding-top: 10px; 
+  padding-left: 40px;  
+  padding-bottom: 30px; 
+  text-align: left; 
+  color: white;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  border-color: white;
+  border-style: solid;  
+}
+  .item{
   
   margin-bottom: 10px;
   margin: auto;
@@ -45,36 +92,35 @@ code {
   break-inside: avoid;
 
   color: white;
-  font-size:25px;        
-  
-  /* list-style-type: none; */
-
+  font-size:25px;     
 }
 
-.Link{
-  color:#4E5D94;
+.footer a:hover {
+  color: #FFFFFF;
+}
+
+.footer a {
   text-decoration: none;
+  color: #7289da;
 }
 
-.editLink{
-  color:#4E5D94;
-  text-decoration: none;
+.contributors {
+  color: #287EC7;
 }
 
-.item h1{
-  color:#4E5D94;
-  text-decoration: none;
+.images {
+
+  height: 50%;
+  align-items: middle;
+  vertical-align: center;
+  margin: 50px auto 20px;
+  height: 300px;
+  width: 400px;
+  float: center;
 }
 
-.spacer{
-  padding-top: 5px;
-  background-color: #fcb6bb
-}
-
-.AddButton{
-  margin: auto;
-  text-align: center;
-  font-size: 16px;
+.vert_allign {
+  display: inline-block;
 }
 
 .studentLabel {

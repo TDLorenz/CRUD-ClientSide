@@ -14,22 +14,22 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     textAlign: 'left',
     fontType: 'bold',
-    fontFamily: 'Courier, sans-serif', 
-    fontSize: '35px', 
+    fontFamily: 'Courier, sans-serif',
+    fontSize: '35px',
     color: '#CDDC39'
   },
-  appBar:{
+  appBar: {
     backgroundColor: '#11153e',
     shadows: ['none'],
   },
-  greeting:{
+  greeting: {
     display: 'flex',
     justifyContent: 'center',
     backgroundColor: 'white',
     width: "50%",
     margin: "auto",
   },
-  links:{
+  links: {
     textDecoration: 'none',
   }
 
@@ -81,21 +81,22 @@ const AllStudentsView = (props) => {
   return (
     <div>
       <div className={classes.root}>
-      <AppBar position="static" elevation={0} className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h6" className={classes.title} color="inherit" >
-            CRUD App
+        <AppBar position="static" elevation={0} className={classes.appBar}>
+          <Toolbar>
+          
+            <Typography variant="h6" className={classes.title} color="inherit" >
+            <Link className={classes.links} to={'/'} >CRUD App</Link>
           </Typography>
-
-          <Link className={classes.links} to={'/campuses'} >
-            <Button variant="contained" color="primary" style={{marginRight: '10px'}}>
-              All Campuses
+          
+            <Link className={classes.links} to={'/campuses'} >
+              <Button variant="contained" color="primary" style={{ marginRight: '10px' }}>
+                All Campuses
             </Button>
-          </Link>
+            </Link>
 
-          <Link className={classes.links} to={'/students'} >
-            <Button variant="contained" color="primary">
-              All Students
+            <Link className={classes.links} to={'/students'} >
+              <Button variant="contained" color="primary">
+                All Students
             </Button>
           </Link>
         </Toolbar>
