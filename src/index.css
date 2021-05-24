@@ -24,7 +24,7 @@ code {
 
 .homepage_text {
   color: white;
-  line-height: 1.5;
+  line-height: 1.7;
   display: flex; 
   text-align: center;
   padding: 10px 10px 10px 10px;
@@ -32,12 +32,11 @@ code {
   margin-left: auto;
   margin-right: auto;  
   width: 50%;
-  /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black; 
 }
 
 .homepage_title {
   color: white;
-  /* display: flex; */
   font-size: 40px;
   text-align: center;
   padding: 10px 10px 10px 10px;
