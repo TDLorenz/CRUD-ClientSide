@@ -5,7 +5,7 @@ class Footer extends Component {
         return (
             <footer className="footer">
                 <p>
-                    <h3>Contributors</h3>
+                    <h3 className="contributors">Contributors</h3>
                     <p>
                         Vladimir Andreev &emsp; &nbsp; &nbsp; <a href="https://github.com/VladimirAndreev09">https://github.com/VladimirAndreev09</a>
                     </p>
