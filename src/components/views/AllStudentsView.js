@@ -39,7 +39,43 @@ const useStyles = makeStyles(theme => ({
 const AllStudentsView = (props) => {
   const classes = useStyles();
   if (!props.allStudents.length) {
-    return <div>There are no Students.</div>;
+    return (
+      <div>
+      <div className={classes.root}>
+      <AppBar position="static" elevation={0} className={classes.appBar}>
+        <Toolbar>
+          <Typography variant="h6" className={classes.title} color="inherit" >
+            CRUD App
+          </Typography>
+
+          <Link className={classes.links} to={'/campuses'} >
+            <Button variant="contained" color="primary" style={{marginRight: '10px'}}>
+              All Campuses
+            </Button>
+          </Link>
+
+          <Link className={classes.links} to={'/students'} >
+            <Button variant="contained" color="primary">
+              All Students
+            </Button>
+          </Link>
+        </Toolbar>
+      </AppBar>
+      
+      <div className={classes.greeting}><h1>All Students View</h1></div>
+
+    <div className="item">There are no Students.</div>;
+    <div className="AddButton">
+      <Link to={'/students/add'} >
+            <Button variant="contained" color="primary" size="lg">
+              Add Student
+            </Button>
+          </Link>
+      </div>
+    </div>
+    </div>
+    )
+    
   }
 
   return (

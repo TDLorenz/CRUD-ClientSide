@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchCampusThunk } from "../../store/thunks";
-
+import { fetchAllStudentsThunk } from "../../store/thunks";
 import { CampusView } from "../views";
+import PropTypes from "prop-types";
+import { deleteCampusThunk } from "../../store/thunks";
 
 class CampusContainer extends Component {
   componentDidMount() {
     //getting campus ID from url
     this.props.fetchCampus(this.props.match.params.id);
+    this.props.fetchAllStudents();
   }
 
   handleDelete = (campusId) =>
@@ -19,6 +22,8 @@ class CampusContainer extends Component {
     return (
       <CampusView 
         campus={this.props.campus}
+        allStudents={this.props.allStudents}
+        handleDelete={this.handleDelete}
       />
     );
   }
@@ -28,6 +33,7 @@ class CampusContainer extends Component {
 const mapState = (state) => {
   return {
     campus: state.campus,
+    allStudents: state.allStudents,
   };
 };
 
@@ -35,7 +41,15 @@ const mapState = (state) => {
 const mapDispatch = (dispatch) => {
   return {
     fetchCampus: (id) => dispatch(fetchCampusThunk(id)),
+    fetchAllStudents: () => dispatch(fetchAllStudentsThunk()),
+    deleteCampus: (campusId) => dispatch(deleteCampusThunk(campusId)),
   };
+};
+
+// Type check props;
+CampusContainer.propTypes = {
+  allStudents: PropTypes.array.isRequired,
+  fetchAllStudents: PropTypes.func.isRequired,
 };
 
 export default connect(mapState, mapDispatch)(CampusContainer);

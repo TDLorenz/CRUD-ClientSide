@@ -35,7 +35,7 @@ class EditCampusContainer extends Component {
         this.props.editCampus(newCampus);
 
         event.target.reset();
-        this.props.history.push('/campuses');
+        this.props.history.push('/campus/'+newCampus.id);
     }
 
     render(){

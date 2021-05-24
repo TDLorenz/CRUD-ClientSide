@@ -34,7 +34,7 @@ class EditStudentContainer extends Component {
         this.props.editStudent(newStudent);
 
         event.target.reset();
-        this.props.history.push('/students');
+        this.props.history.push('/student/'+newStudent.id);
     }
 
     render(){
