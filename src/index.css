@@ -13,74 +13,41 @@ code {
     monospace;
 }
 
-<<<<<<< HEAD
-.cols {
-  columns: 2 auto;
-  text-align: center;
-}
-.item{
-  
-  margin-bottom: 10px;
-  margin: auto;
-  width: 75%;
-  text-align: center;
-  padding:5px;
-  background-color: #2c2f33;
-  font-size:20px;
-
-  border: 2px solid #4E5D94;
-  border-radius: 5px;
-}
-
-.Link{
-  color:#4E5D94;
-  text-decoration: none;
-}
-
-.editLink{
-  color:#4E5D94;
-  text-decoration: none;
-}
-
-.item h1{
-  color:#4E5D94;
-  text-decoration: none;
-}
-
-.spacer{
-  padding-top: 5px;
-  background-color: #fcb6bb
-}
-
-.AddButton{
-  margin: auto;
-  text-align: center;
-  font-size: 16px;
-=======
 .homepage_layout {
   background-color: #4E5D94;
   display: flex;
   text-align: center;
-  /* padding: 10px 10px 10px 10px; */
+  padding: 10px 10px 10px 10px;
+  height: 1000px;
+  width: 101%;
 }
 
 .homepage_text {
   color: white;
-  /* display: flex; */
+  line-height: 1.5;
+  display: flex; 
   text-align: center;
   padding: 10px 10px 10px 10px;
   font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;  
+  width: 50%;
+  /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
 }
 
 .homepage_title {
-  color: #4E5D94;
-  /*display: flex;*/
+  color: white;
+  /* display: flex; */
   font-size: 40px;
   text-align: center;
-  /*padding: 10px 10px 10px 10px;*/
+  padding: 10px 10px 10px 10px;
+  border-style:solid;
+  background-color:black;
+  border-color:#287EC7;
+  border-radius: 20px 20px 20px 20px;
 }
 
-footer {
+.footer {
   display: inline-block; 
   background-color: black;
   padding-top: 10px; 
@@ -90,16 +57,21 @@ footer {
   color: white;
   bottom: 0;
   width: 100%;
-  position:absolute;
+  position: absolute;
+  display: flex;
+  border-color: white;
+  border-style: solid;  
 }
 
-footer a:hover {
+.footer a:hover {
   color: #FFFFFF;
 }
 
-footer a {
+.footer a {
   text-decoration: none;
   color: #7289da;
->>>>>>> 03591ec1dd8566bfb8a24e37fbcf69eed0f21589
 }
 
+.contributors {
+  color: #287EC7;
+}
