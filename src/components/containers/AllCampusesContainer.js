@@ -2,6 +2,7 @@ import { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { fetchAllCampusesThunk } from "../../store/thunks";
+import { fetchAllStudentsThunk } from "../../store/thunks";
 import { addCampusThunk } from "../../store/thunks";
 import { deleteCampusThunk } from "../../store/thunks";
 import { AllCampusesView } from "../views";
@@ -40,10 +41,11 @@ class AllCampusesContainer extends Component {
   render() {
     return (
       <div>
-        <AllCampusesView
-          allCampuses={this.props.allCampuses}
-          handleDelete={this.handleDelete}
-        />
+      <AllCampusesView
+        allCampuses={this.props.allCampuses}
+        allStudents={this.props.allStudents}
+        handleDelete={this.handleDelete}
+      />
       </div>
     );
   }
@@ -52,6 +54,7 @@ class AllCampusesContainer extends Component {
 // Map state to props;
 const mapState = (state) => {
   return {
+    allStudents: state.allStudents,
     allCampuses: state.allCampuses,
   };
 };
@@ -59,6 +62,7 @@ const mapState = (state) => {
 // Map dispatch to props;
 const mapDispatch = (dispatch) => {
   return {
+    fetchAllStudents: () => dispatch(fetchAllStudentsThunk()),
     fetchAllCampuses: () => dispatch(fetchAllCampusesThunk()),
     addCampus: (campus) => dispatch(addCampusThunk(campus)),
     deleteCampus: (campusId) => dispatch(deleteCampusThunk(campusId)),
@@ -67,8 +71,10 @@ const mapDispatch = (dispatch) => {
 
 // Type check props;
 AllCampusesContainer.propTypes = {
+  allStudents: PropTypes.array.isRequired,
   allCampuses: PropTypes.array.isRequired,
   fetchAllCampuses: PropTypes.func.isRequired,
+  fetchAllStudents: PropTypes.func.isRequired,
 };
 
 // Export our store-connected container by default;

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { editStudentThunk } from "../../store/thunks";
 import { fetchStudentThunk } from "../../store/thunks";
-
+import Button from '@material-ui/core/Button';
 
 class EditStudentContainer extends Component {
   componentDidMount() {
@@ -34,29 +34,29 @@ class EditStudentContainer extends Component {
         this.props.editStudent(newStudent);
 
         event.target.reset();
-        this.props.history.push('/students');
+        this.props.history.push('/student/'+newStudent.id);
     }
 
     render(){
         return(
-        <div>
+        <div className="item">
             <form onSubmit={this.handleSubmit}>
-                <label htmlFor="firstname">FirstName: </label>
-                  <input type="text" name="firstname" defaultValue = {this.props.student.firstname} placeholder="First Name" required />
+                <label className="studentLabel" htmlFor="firstname">FirstName: </label>
+                  <input className="studentInput" type="text" name="firstname" defaultValue = {this.props.student.firstname} placeholder="First Name" required />
                 <br/>
-                <label htmlFor="lastname">LastName: </label>
-                  <input type="text" name="lastname" defaultValue = {this.props.student.lastname} placeholder="Last Name" required />
+                <label className="studentLabel" htmlFor="lastname">LastName: </label>
+                  <input className="studentInput" type="text" name="lastname" defaultValue = {this.props.student.lastname} placeholder="Last Name" required />
                 <br/>
-                <label htmlFor="email">Email: </label>
-                  <input type="text" name="email" defaultValue = {this.props.student.email} placeholder="Email" />
+                <label className="studentLabel" htmlFor="email">Email: </label>
+                  <input className="studentInput" type="text" name="email" defaultValue = {this.props.student.email} placeholder="Email" />
                 <br/>
-                <label htmlFor="gpa">GPA: </label>
-                  <input type="text" name="gpa" defaultValue = {this.props.student.gpa} placeholder="GPA" />
+                <label className="studentLabel" htmlFor="gpa">GPA: </label>
+                  <input className="studentInput" type="text" name="gpa" defaultValue = {this.props.student.gpa} placeholder="GPA" />
                 <br/>
-                <label htmlFor="imageUrl">Image Url: </label>
-                  <input type="text" name="imageUrl" defaultValue = {this.props.student.imageUrl} placeholder="https://via.imageurl.com/" />
+                <label className="studentLabel" htmlFor="imageUrl">Image Url: </label>
+                  <input className="studentInput" type="text" name="imageUrl" defaultValue = {this.props.student.imageUrl} placeholder="https://via.imageurl.com/" />
                 <br/>
-                  <button type="submit">Submit</button>
+                <Button type="submit" variant="contained" color="primary">Submit</Button>
               </form>
         </div>
         );
