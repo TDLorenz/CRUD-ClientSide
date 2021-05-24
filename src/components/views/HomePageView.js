@@ -4,6 +4,10 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Footer from '../Footer'
+import student1 from "./student1.jpeg"
+import student2 from "./student2.jpeg"
+import campus1 from "./campus1.jpeg"
+import campus2 from "./campus2.jpeg"
 
 import { Link } from 'react-router-dom';
 
@@ -64,29 +68,60 @@ const HomePageView = () => {
       <br />
       <br />
       <br />
+
       <h className="homepage_title">Campus and Student Interactive Management Simulator</h>
       <br />
       <br />
       <br />
       <br />
       <br />
+
       <section className="homepage_layout">
+        <div>
+
+          <br />
+
+          <p className="homepage_text">
+            This RESTful full-stack web app simulates the management of some students and campuses.
+            Students and Campuses can be viewed via navigating the different links above on the
+            navbar and are seperated. It is possible to view single campuses and students as well
+            as all of them. Student and Campus entries can be
+            deleted or updated by adding new entries.
+            The app will track these and update the entries via a database.
+          </p>
+
+          <br />
+
+        </div>
+
         <br />
-        <p className="homepage_text">
-          This RESTful full-stack web app simulates the management of some students and campuses. Students and Campuses
-          can be viewed via navigating the different links above on the navbar and are seperated. It is possible to view
-          single campuses and students as well as all of them. Student and Campus entries can be deleted or updated by adding new entries.
-          The app will track these and update the entries via a database.
-                 </p>
+
+        <div className="vert_allign">
+
+          <img className="images" src={student2} alt="student1" />
+
+          &ensp;
+
+          <img className="images" src={student1} alt="student2" />
+
+          &ensp;
+
+          <img className="images" src={campus1} alt="campus1" />
+
+          &ensp;
+
+          <img className="images" src={campus2} alt="campus2" />
+
+        </div>
 
       </section>
+
       <Footer />
+
     </div>
 
   );
 }
-
-
 
 
 export default HomePageView;

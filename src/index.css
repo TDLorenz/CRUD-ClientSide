@@ -12,14 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .homepage_layout {
   background-color: #4E5D94;
-  display: flex;
   text-align: center;
   padding: 10px 10px 10px 10px;
   height: 1000px;
-  width: 100%;
+  width: 101%;
 }
 
 .homepage_text {
@@ -29,10 +27,12 @@ code {
   text-align: center;
   padding: 10px 10px 10px 10px;
   font-size: 30px;
+  
   margin-left: auto;
   margin-right: auto;  
-  width: 50%;
-  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black; 
+  width: 75%;
+  
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
 .homepage_title {
@@ -55,7 +55,7 @@ code {
   text-align: left; 
   color: white;
   bottom: 0;
-  width: 99%;
+  width: 100%;
   position: absolute;
   display: flex;
   border-color: white;
@@ -74,3 +74,19 @@ code {
 .contributors {
   color: #287EC7;
 }
+
+.images {
+
+  height: 50%;
+  align-items: middle;
+  vertical-align: center;
+  margin: 50px auto 20px;
+  height: 355px;
+  width: 500px;
+  float: center;
+}
+
+.vert_allign {
+  display: inline-block;
+}
+
