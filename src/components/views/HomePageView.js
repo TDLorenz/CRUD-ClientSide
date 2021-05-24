@@ -67,10 +67,9 @@ const HomePageView = () => {
       <br />
       <br />
       <br />
-      <br />
 
       <h className="homepage_title">Campus and Student Interactive Management Simulator</h>
-      <br />
+
       <br />
       <br />
       <br />
@@ -79,8 +78,6 @@ const HomePageView = () => {
       <section className="homepage_layout">
         <div>
 
-          <br />
-
           <p className="homepage_text">
             This RESTful full-stack web app simulates the management of some students and campuses.
             Students and Campuses can be viewed via navigating the different links above on the
@@ -88,13 +85,9 @@ const HomePageView = () => {
             as all of them. Student and Campus entries can be
             deleted or updated by adding new entries.
             The app will track these and update the entries via a database.
-          </p>
-
-          <br />
+                    </p>
 
         </div>
-
-        <br />
 
         <div className="vert_allign">
 
@@ -102,15 +95,15 @@ const HomePageView = () => {
 
           &ensp;
 
-          <img className="images" src={student1} alt="student2" />
+                    <img className="images" src={student1} alt="student2" />
 
           &ensp;
 
-          <img className="images" src={campus1} alt="campus1" />
+                    <img className="images" src={campus1} alt="campus1" />
 
           &ensp;
 
-          <img className="images" src={campus2} alt="campus2" />
+                    <img className="images" src={campus2} alt="campus2" />
 
         </div>
 
@@ -119,9 +112,7 @@ const HomePageView = () => {
       <Footer />
 
     </div>
-
   );
 }
-
 
 export default HomePageView;
